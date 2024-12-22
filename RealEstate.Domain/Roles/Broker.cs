@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Domain
+namespace RealEstate.Domain.Roles
 {
-    internal class Property
+    public class Broker : Manager
     {
+        public Broker(string name) : base(name) { }
     }
 }
