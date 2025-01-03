@@ -4,12 +4,13 @@ namespace RealEstate.Domain.Properties
 {
     public class Property : BaseEntity
     {
-        public string? Title { get; private set; }
-        public string? Description { get; private set; }
-        public string? Location { get; private set; }
-        public decimal Price { get; private set; }
-        public PropertyStatus Status { get; private set; }
-        public int RealtorId { get; private set; }
+        public string? Title { get;  set; }
+        public string? Description { get;  set; }
+        public string? Location { get;  set; }
+        public string? Image {  get;  set; }
+        public decimal Price { get;  set; }
+        public PropertyStatus Status { get;  set; }
+        public int RealtorId { get;  set; }
     }
 
     public enum PropertyStatus

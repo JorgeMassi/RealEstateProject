@@ -1,4 +1,5 @@
 ﻿using RealEstate.Domain.Entity;
+using RealEstate.Domain.Logins;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,12 +14,12 @@ namespace RealEstate.Domain.Roles
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
-        public string? PasswordHash { get; set; } 
+        public Account Account { get; set; }
         public Role Role { get; set; }
     }
     public enum Role
     {
-        Admin,
+        AdminUser,
         Broker,
         Manager,
         Realtor,

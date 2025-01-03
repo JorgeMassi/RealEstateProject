@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Domain.Roles
 {
-    public class AdministrativeUser
+    public class AdminUser
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
         public List<Appointment> Calendar { get; private set; } = new List<Appointment>();
     }
+}
