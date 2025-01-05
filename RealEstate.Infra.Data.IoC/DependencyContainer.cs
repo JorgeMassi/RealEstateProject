@@ -1,12 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RealEstate.Application.Interfaces.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using RealEstate.Application.Services.Properties;
+using RealEstate.Infra.Data.Repositories.ApplicationDbContext;
+using RealEstate.Infra.Data.Repositories.Properties;
 using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RealEstate.Infra.Data.IoC
 {
@@ -19,12 +17,12 @@ namespace RealEstate.Infra.Data.IoC
 
             // Property
             services.AddScoped<IPropertyRepository, PropertyRepository>();
-            services.AddScoped<IPropertyService, PorpertyService>();
+            services.AddScoped<IPropertyService, PropertyService>();
 
 
 
             // Database Config
-            services.AddRemedyDatabase(configuration);
+            services.AddRealEstateDatabase(configuration);
 
             // Authentication
             services.AddJwtAuthentication(configuration);

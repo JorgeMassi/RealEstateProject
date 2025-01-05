@@ -1,4 +1,5 @@
-﻿using RealEstate.Application.Dtos.Properties;
+﻿using RealEstate.Application.Interfaces.Generic;
+using RealEstate.Domain.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Application.Interfaces.Properties
 {
-    public interface IPropertyService
+    public interface IPropertyService : IService<Property, Guid>
     {
-        Task<IEnumerable<PropertyResponseDto>> GetAll();
-        Task<PropertyResponseDto> GetById(Guid id);
-        Task<PropertyResponseDto> Create(PropertyRequestDto property);
-        Task<PropertyResponseDto> Update(PropertyRequestDto property);
-        Task<PropertyResponseDto> Delete(PropertyDeleteRequestDto property);
-        Task<PropertyResponseDto> Delete(Guid id);
+        Task<IEnumerable<Property>> GetAll();
+        Task<Property> GetById(Guid id);
+        Task<Property> Create(Property property);
+        Task<Property> Update(Property property);
+        Task<Property> Delete(Property property);
+        Task<Property> Delete(Guid id);
     }
 }

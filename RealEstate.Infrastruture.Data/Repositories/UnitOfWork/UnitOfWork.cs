@@ -1,12 +1,7 @@
-﻿using RealEstate.Infra.Data.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RealEstate.Application.Interfaces.UnitOfWork;
+using RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts;
 
-
-namespace RealEstate.Infra.Data.UnitOfWork
+namespace RealEstate.Infrastruture.Data.Repositories.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {

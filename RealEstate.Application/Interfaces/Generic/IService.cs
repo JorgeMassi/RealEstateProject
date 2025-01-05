@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Application.Dtos.Properties
+namespace RealEstate.Application.Interfaces.Generic
 {
-    public class ListingResponseDto
+    public interface IService<TEnrity, TidPrimaryKey>
     {
     }
 }

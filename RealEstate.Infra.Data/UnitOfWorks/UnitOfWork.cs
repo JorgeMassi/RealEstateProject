@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Application.Dtos.Properties
+namespace RealEstate.Infra.Data.UnitOfWorks
 {
-    internal class ListingRequestDto
+    public class UnitOfWork : IUnitOfWork 
     {
     }
 }

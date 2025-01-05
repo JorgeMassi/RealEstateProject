@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Infra.Data.Repository
+namespace RealEstate.Infra.Data.Repositories.Generics
 {
     public class Repository<TEntity, TId> : IRepository<TEntity, TId> where TEntity : class
     {
@@ -49,7 +49,4 @@ namespace RealEstate.Infra.Data.Repository
             return Delete(entity);
         }
     }
-}
-
-
 }

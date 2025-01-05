@@ -7,20 +7,20 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Infra.Data.Repository
+namespace RealEstate.Infra.Data.Repositories.ApplicationDbContext
 {
     public class ApplicationDbContext : DbContext
     {
         public DbSet<Property> Properties { get; set; }
-       
+
 
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
-            
+
         }
     }
 }
-}
+

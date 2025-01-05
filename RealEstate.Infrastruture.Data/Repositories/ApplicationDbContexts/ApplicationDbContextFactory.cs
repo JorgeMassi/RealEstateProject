@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -6,20 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Infra.Data.Repository
+namespace RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts
 {
-    internal class ApplicationDbContextFactory
+    internal class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         static string? connectionString = null;
 
         static ApplicationDbContextFactory()
         {
             IConfiguration config = new ConfigurationBuilder()
+               //.SetBasePath(Directory.GetCurrentDirectory())
+               //.AddJsonFile("appsettings.Development.json", true, true)
+               //.Build();
                .SetBasePath(Directory.GetParent(".").ToString())
-               .AddJsonFile("Remedy.WebApi/appsettings.Development.json", true, true)
-               .Build();
+               .AddJsonFile("RealEstate.Api/appsettings.Development.json", true, true)
+                .Build();
 
-            connectionString = config["ConnectionStrings:RemedyCS"];
+            connectionString = config["ConnectionStrings:RealEstateCS"];
             Console.WriteLine("ConnectionString:" + connectionString);
         }
 
@@ -33,5 +37,4 @@ namespace RealEstate.Infra.Data.Repository
             return new ApplicationDbContext(optionsBuilder.Options);
         }
     }
-}
 }

@@ -13,7 +13,7 @@ namespace RealEstate.Infra.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Property> builder)
         {
-            builder.ToTable("apartament");
+            builder.ToTable("Property");
         }
     }
 }

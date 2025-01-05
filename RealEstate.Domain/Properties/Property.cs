@@ -2,8 +2,9 @@
 
 namespace RealEstate.Domain.Properties
 {
-    public class Property : BaseEntity
+    public class Property
     {
+        public Guid Id { get; set; }
         public string? Title { get;  set; }
         public string? Description { get;  set; }
         public string? Location { get;  set; }

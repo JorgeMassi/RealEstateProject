@@ -1,52 +1,57 @@
-﻿using RealEstate.Application.Dtos.Properties;
-using RealEstate.Application.Interfaces.Generic;
-using RealEstate.Application.Interfaces.Properties;
+﻿using RealEstate.Application.Interfaces.Properties;
+using RealEstate.Application.Interfaces.UnitOfWork;
 using RealEstate.Domain.Properties;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RealEstate.Application.Services.Properties
 {
     public class PropertyService : IPropertyService
     {
-        public readonly IPropertyRepository _propertyRepository;
+        private readonly IPropertyRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public PropertyService(IPropertyRepository propertyRepository)
+        public PropertyService(IPropertyRepository repository, IUnitOfWork unitOfWork)
         {
-            _propertyRepository = propertyRepository;
+            _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
-        public Task<PropertyResponseDto> Create(PropertyRequestDto property)
+        public async Task<Property> Create(Property property)
         {
-            throw new NotImplementedException();
+            property.Id = Guid.NewGuid();
+            var entity = await _repository.Create(property);
+            await _unitOfWork.Commit();
+            return entity;
         }
 
-        public Task<PropertyResponseDto> Delete(PropertyDeleteRequestDto property)
+        public async Task<Property> Delete(Property property)
         {
-            throw new NotImplementedException();
+            var entity = _repository.Delete(property);
+            await _unitOfWork.Commit();
+            return entity;
         }
 
-        public Task<PropertyResponseDto> Delete(Guid id)
+        public async Task<Property> Delete(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = await _repository.Delete(id);
+            await _unitOfWork.Commit();
+            return entity;
         }
 
-        public Task<IEnumerable<PropertyResponseDto>> GetAll()
+        public Task<IEnumerable<Property>> GetAll()
         {
-            throw new NotImplementedException();
+            return _repository.GetAll();
         }
 
-        public Task<PropertyResponseDto> GetById(Guid id)
+        public Task<Property> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return _repository.GetById(id);
         }
 
-        public Task<PropertyResponseDto> Update(PropertyRequestDto property)
+        public async Task<Property> Update(Property property)
         {
-            throw new NotImplementedException();
+            var entity = _repository.Update(property);
+            await _unitOfWork.Commit();
+            return entity;
         }
     }
 }
