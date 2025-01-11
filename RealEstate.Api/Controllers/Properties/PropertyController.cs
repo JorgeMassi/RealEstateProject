@@ -2,7 +2,7 @@
 using RealEstate.Application.Interfaces.Properties;
 using RealEstate.Domain.Properties;
 
-namespace RealEstate.Api.Controllers
+namespace RealEstate.Api.Controllers.Properties
 {
     [Route("api/[controller]")]
     [ApiController]

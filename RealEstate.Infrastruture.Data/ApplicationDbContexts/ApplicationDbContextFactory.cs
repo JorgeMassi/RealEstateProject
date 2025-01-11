@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts
+namespace RealEstate.Infrastruture.Data.ApplicationDbContexts
 {
     internal class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {

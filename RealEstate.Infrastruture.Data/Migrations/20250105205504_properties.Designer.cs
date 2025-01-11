@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts;
+using RealEstate.Infrastruture.Data.ApplicationDbContexts;
+
 
 #nullable disable
 
@@ -13,7 +14,7 @@ namespace RealEstate.Infrastruture.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20250105205504_properties")]
-    partial class properties
+    partial class Properties
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

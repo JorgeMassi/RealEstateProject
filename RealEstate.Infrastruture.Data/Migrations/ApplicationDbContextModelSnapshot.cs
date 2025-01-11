@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts;
+using RealEstate.Infrastruture.Data.ApplicationDbContexts;
+
 
 #nullable disable
 

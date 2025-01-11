@@ -1,7 +1,7 @@
 ﻿using RealEstate.Application.Interfaces.UnitOfWork;
-using RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts;
+using RealEstate.Infrastruture.Data.ApplicationDbContexts;
 
-namespace RealEstate.Infrastruture.Data.Repositories.UnitOfWork
+namespace RealEstate.Infrastruture.Data.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {

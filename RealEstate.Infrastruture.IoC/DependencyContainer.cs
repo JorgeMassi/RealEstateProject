@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using RealEstate.Application.Interfaces.Properties;
 using RealEstate.Application.Interfaces.UnitOfWork;
 using RealEstate.Application.Services.Properties;
-using RealEstate.Infrastruture.Data.Repositories.ApplicationDbContexts;
+using RealEstate.Infrastruture.Data.ApplicationDbContexts;
 using RealEstate.Infrastruture.Data.Repositories.Properties;
-using RealEstate.Infrastruture.Data.Repositories.UnitOfWork;
+using RealEstate.Infrastruture.Data.UnitOfWork;
 
 namespace RealEstate.Infrastruture.IoC
 {
