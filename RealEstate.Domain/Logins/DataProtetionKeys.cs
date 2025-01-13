@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RealEstate.Domain
+namespace RealEstate.Domain.Logins
 {
-    internal class Property
-    {
-    }
+    public record DataProtectionKeys(byte[] PasswordHash, byte[] PasswordSalt);
+
 }
