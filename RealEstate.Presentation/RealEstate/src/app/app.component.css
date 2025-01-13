@@ -1,0 +1,110 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-nav ul li {
+    margin-left: 20px;
+  }
+  
+  .navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+  }
+  
+  /* Main content wrapper */
+  .content-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/Home/andreas-brucker-X87yB-jvYHw-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px; /* Offset for the fixed navbar */
+  }
+  
+  .content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .content-text {
+    z-index: 1;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-nav ul li {
+      margin: 10px 0;
+    }
+  
+    .content-text {
+      padding: 10px;
+    }
+  }
+  html, body {
+    overflow-y: auto; /* Adiciona a barra de rolagem apenas quando necessário */
+  }
+  
