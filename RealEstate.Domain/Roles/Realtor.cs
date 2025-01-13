@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Domain.Roles
 {
-    public class Realtor : User
+    public class Realtor :User
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
+        public new Guid Id { get; private set; }
+        public string RealtorName { get; private set; }
 
         public List<Property> Properties { get; private set; } = new List<Property>();
         public Realtor(string name)
         {
-            Name = name;
+            RealtorName = name;
         }
        
 

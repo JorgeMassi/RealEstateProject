@@ -38,7 +38,7 @@ namespace RealEstate.Application.Services.Users.Roles
                     Id = Guid.NewGuid(),
                     Username = registerRequestDto.Username,
                     PasswordHash = dataProtectionKeys.PasswordHash,
-                    PasswordSaltHash = dataProtectionKeys.PasswordSalt,
+                    SaltHash = dataProtectionKeys.PasswordSalt,
                 }
             };
             _repository.Create(user);

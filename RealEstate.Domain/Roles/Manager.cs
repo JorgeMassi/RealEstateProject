@@ -8,7 +8,7 @@ namespace RealEstate.Domain.Roles
 {
     public class Manager : Realtor
     {
-        public List<Realtor> Team { get; private set; } = new List<Realtor>();
+        public List<Realtor> Team { get; set; } = new List<Realtor>();
 
         public Manager(string name): base(name) { }
     }
