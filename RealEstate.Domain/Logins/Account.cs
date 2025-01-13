@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Domain.Logins
 {
-    public class Account : BaseEntity
+    public class Account 
     {
-        public string Username { get; set; }
+        public Guid Id { get; set; }
+        public string? Username { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] SaltHash { get; set; }
         

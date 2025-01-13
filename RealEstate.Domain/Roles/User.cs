@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Domain.Roles
 {
-    public class User : BaseEntity
+    public class User 
     {
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
         public string? Email { get; set; }
         public Account? Account { get; set; }
         public Role Role { get; set; }

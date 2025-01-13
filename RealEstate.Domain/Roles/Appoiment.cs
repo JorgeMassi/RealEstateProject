@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace RealEstate.Domain.Roles
 {
-    public class Appointment : BaseEntity
+    public class Appointment
     {
+        public int Id { get; set; }
         public string? Description { get; private set; }
         public DateTime StartTime { get; private set; }
         public DateTime EndTime { get; private set; }
