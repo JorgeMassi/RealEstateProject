@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+=======
 import {
   AngularNodeAppEngine,
   createNodeRequestHandler,
@@ -64,3 +72,4 @@ if (isMainModule(import.meta.url)) {
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 export const reqHandler = createNodeRequestHandler(app);
+>>>>>>> ab31ec056e7902227f1b2e839833b6efedbefb1d

@@ -1,6 +1,0 @@
-@RealEstate.Api_HostAddress = http://localhost:5240
-
-GET {{RealEstate.Api_HostAddress}}/Property/
-Accept: application/json
-
-###
