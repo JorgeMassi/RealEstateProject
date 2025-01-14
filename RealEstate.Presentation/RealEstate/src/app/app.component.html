@@ -1,0 +1,38 @@
+<!-- Main Container -->
+<div class="main-container">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">RealEstate</a>
+    </div>
+    <div class="navbar-nav" id="mainMenu">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/listing']">Buy/Rent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/cards']">Sell</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" [routerLink]="['/create']">LogIn</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <!-- This div will be visible only when there's no dynamic content loaded -->
+    <ng-container *ngIf="!routerOutletActivated">
+      <div class="content-overlay"></div>
+      <div class="content-text">
+        <h1>Welcome to RealEstate</h1>
+        <h2>Housing Agency</h2>
+        <p>Your dream home is just a click away.</p>
+      </div>
+    </ng-container>
+
+    <!-- Dynamic content -->
+    <router-outlet (activate)="onActivate()"></router-outlet>
+  </div>
+</div>
