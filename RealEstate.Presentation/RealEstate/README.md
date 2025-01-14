@@ -1,6 +1,10 @@
 # RealEstate
 
+<<<<<<< HEAD
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+=======
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+>>>>>>> ab31ec056e7902227f1b2e839833b6efedbefb1d
 
 ## Development server
 
