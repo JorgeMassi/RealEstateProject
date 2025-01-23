@@ -1,0 +1,77 @@
+.card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50; /* Darker color for prominence */
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+    color: #7f8c8d; /* Slightly lighter text for descriptions */
+  }
+  
+  .card-price {
+    font-weight: bold;
+    color: #27ae60; /* Green color for price to make it stand out */
+    margin-bottom: 10px;
+  }
+  
+  .card-location,
+  .card-features,
+  .card-year,
+  .card-area,
+  .card-rooms,
+  .card-floors,
+  .card-bathrooms,
+  .card-garage,
+  .card-energy-rating,
+  .card-condition {
+    margin-bottom: 8px;
+    color: #34495e; /* Darker shade for additional information */
+  }
+  
+  .card-location {
+    font-weight: 500;
+  }
+  
+  .card-garage {
+    color:    '#27ae60'  '#e74c3c' ; /* Green if yes, red if no */
+  }
+  
+  .card-condition {
+    font-weight: 600;
+    color: #3498db; /* Blue for condition */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 10px;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+    }
+  }
+  /* Add margin to create space between cards */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    max-width: 300px;
+    margin: 15px; /* Adds space between cards */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card {
+      margin: 10px; /* Adjust margin for smaller screens */
+    }
+  }
+  
