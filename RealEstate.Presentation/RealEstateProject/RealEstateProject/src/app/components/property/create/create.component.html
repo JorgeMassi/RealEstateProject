@@ -1,0 +1,111 @@
+<div class="container mt-5">
+    <form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6">
+          <!-- Typology -->
+          <div class="form-group">
+            <label for="typology">Typology</label>
+            <input id="typology" type="text" formControlName="typology" class="form-control" placeholder="Enter property typology">
+            <div *ngIf="propertyForm.get('typology').invalid && propertyForm.get('typology').touched" class="text-danger">
+              Typology is required.
+            </div>
+          </div>
+  
+          <!-- City -->
+          <div class="form-group">
+            <label for="city">City</label>
+            <input id="city" type="text" formControlName="location.city" class="form-control" placeholder="Enter city">
+            <div *ngIf="propertyForm.get('location.city').invalid && propertyForm.get('location.city').touched" class="text-danger">
+              City is required.
+            </div>
+          </div>
+  
+          <!-- Location -->
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input id="location" type="text" formControlName="location.location" class="form-control" placeholder="Enter specific location">
+          </div>
+  
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="form-control" placeholder="Enter property description"></textarea>
+          </div>
+  
+          <!-- Features -->
+          <div class="form-group">
+            <label for="features">Features</label>
+            <input id="features" type="text" formControlName="features" class="form-control" placeholder="Enter features">
+          </div>
+  
+          <!-- Year Built -->
+          <div class="form-group">
+            <label for="yearBuilt">Year Built</label>
+            <input id="yearBuilt" type="number" formControlName="yearBuilt" class="form-control" placeholder="Enter year built">
+          </div>
+        </div>
+  
+        <!-- Right Column -->
+        <div class="col-md-6">
+          <!-- Price -->
+          <div class="form-group">
+            <label for="priceValue">Price</label>
+            <input id="priceValue" type="number" formControlName="price.priceValue" class="form-control" placeholder="Enter price">
+            <div *ngIf="propertyForm.get('price.priceValue').invalid && propertyForm.get('price.priceValue').touched" class="text-danger">
+              Price is required.
+            </div>
+          </div>
+  
+          <!-- Total Area -->
+          <div class="form-group">
+            <label for="totalArea">Total Area (M²)</label>
+            <input id="totalArea" type="number" formControlName="totalArea" class="form-control" placeholder="Enter total area">
+          </div>
+  
+          <!-- Rooms -->
+          <div class="form-group">
+            <label for="rooms">Rooms</label>
+            <input id="rooms" type="number" formControlName="rooms" class="form-control" placeholder="Enter number of rooms">
+          </div>
+  
+          <!-- Floors -->
+          <div class="form-group">
+            <label for="floors">Floors</label>
+            <input id="floors" type="number" formControlName="floors" class="form-control" placeholder="Enter number of floors">
+          </div>
+  
+          <!-- Bathrooms -->
+          <div class="form-group">
+            <label for="bathrooms">Bathrooms</label>
+            <input id="bathrooms" type="number" formControlName="bathrooms" class="form-control" placeholder="Enter number of bathrooms">
+          </div>
+  
+          <!-- Garage -->
+          <div class="form-group">
+            <label for="garage">Garage</label>
+            <select id="garage" formControlName="garage" class="form-control">
+              <option [value]="true">Yes</option>
+              <option [value]="false">No</option>
+            </select>
+          </div>
+  
+          <!-- Energy Rating -->
+          <div class="form-group">
+            <label for="energyRating">Energy Rating</label>
+            <input id="energyRating" type="text" formControlName="energyRating" class="form-control" placeholder="Enter energy rating">
+          </div>
+  
+          <!-- Condition -->
+          <div class="form-group">
+            <label for="condition">Condition</label>
+            <input id="condition" type="text" formControlName="condition" class="form-control" placeholder="Enter property condition">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="propertyForm.invalid">Submit</button>
+      </div>
+  

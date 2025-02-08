@@ -1,0 +1,9 @@
+
+<h1>listing</h1>
+
+    <div class="cards-container d-flex justify-content-center">
+        <div *ngFor="let property of properties">
+          <app-cards [property]="property"></app-cards>
+        </div>
+      </div>
+
