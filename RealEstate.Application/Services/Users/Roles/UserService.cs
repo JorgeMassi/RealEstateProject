@@ -48,10 +48,9 @@ namespace RealEstate.Application.Services.Users.Roles
         }
         public async Task<User> Create(User user)
         {
-            //verify
-            user.Id = Guid.NewGuid();
+            
             var entity = await _repository.Create(user);
-            await _unitOfWork.Commit();
+            
             return entity;
         }
 
