@@ -46,6 +46,7 @@ namespace RealEstate.Infrastruture.IoC
 
             // Database Config
             services.AddRealEstateDatabase(configuration);
+            
         }
 
         public static IServiceCollection AddRealEstateDatabase(this IServiceCollection services, IConfiguration configuration)

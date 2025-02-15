@@ -27,8 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Infrastruture.Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{FFF9B622-FEAE-4693-8699-EC67C0553B8D}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\cmd.txt = ..\..\cmd.txt
-		..\..\summary.txt = ..\..\summary.txt
+		E:\RealStateProject\Miigration.txt = E:\RealStateProject\Miigration.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Infrastruture.IoC", "RealEstate.Infrastruture.IoC\RealEstate.Infrastruture.IoC.csproj", "{766B1CC8-C456-4BEA-8B94-E6BE50C663AC}"
