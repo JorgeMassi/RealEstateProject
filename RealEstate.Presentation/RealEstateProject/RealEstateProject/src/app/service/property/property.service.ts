@@ -7,7 +7,7 @@ import { Property } from '../../models/properties/property';
   providedIn: 'root'
 })
 export class PropertyService {
-  private apiUrl = 'http://localhost:8080/api/Property';
+  private apiUrl = 'https://localhost:8080/api/Property';
 
   constructor(private http: HttpClient) { }
 
@@ -27,5 +27,5 @@ export class PropertyService {
             console.log("Completed")
         });
   }
-  
+
 }

@@ -1,19 +1,18 @@
 <h1>cards</h1>
 <div class="card">
-    <!-- Conditional Image -->
-    <!--<img *ngIf="property.imageUrl" [src]="property.imageUrl" alt="{{property.typology?.name}}" class="card-img-top">-->
-    
-    <div class="card-body">
-      <h5 class="card-title">{{ property.title }} - {{ property.location }}</h5>
-      <p class="card-text">{{ property.description }}</p>
-      <p class="card-price">Price: ${{ property.price }}</p>
-      <p class="card-features">Features: {{ property.image }}</p>
-      <p class="card-condition">Condition: {{ property.status }}</p>
-  
-      <!-- View Details Button -->
-      <!--<button (click)="navigateToDetails()" class="btn btn-primary">View Details</button>-->
-  
-      
-    </div>
+  <img *ngIf="property.image" [src]="'/assets/images/' + property.image" alt="{{ property.title }}" class="card-img-top">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ property.title }} - {{ property.location }}</h5>
+    <p class="card-text">{{ property.description }}</p>
+    <p class="card-price">Price: ${{ property.price }}</p>
+
+    <!-- Property Condition Display (Enum String) -->
+    <!--<p class="card-condition">
+     Condition: {{ property.status === PropertyStatus.Available ? 'Available' : property.status }}
+   </p>-->
+
+    <!-- View Details Button -->
+    <button (click)="navigate(property.id)" class="btn btn-primary">View Details</button>
   </div>
-  
+</div>

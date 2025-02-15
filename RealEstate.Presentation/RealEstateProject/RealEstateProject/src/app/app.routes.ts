@@ -7,9 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PropertyService } from './service/property/property.service';
 
 export const routes: Routes = [
-    {path: 'listing', component:ListingComponent}, 
+    {path: 'listing', component:ListingComponent},
     {path: 'cards', component: CardsComponent},
-    
+
   ];
   @NgModule({
     imports: [RouterModule.forRoot(routes), HttpClientXsrfModule, ReactiveFormsModule],
