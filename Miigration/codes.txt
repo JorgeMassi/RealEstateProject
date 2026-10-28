@@ -73,6 +73,5 @@ Commands:
   dotnet watch -lp http
   
   
-  GitToken
-  Jorge.Massi
-  C6Hi03Ukuo3YPqjkSo0ujruHHYE7rArNesR7Ji3bq3KxBiTV7J4TJQQJ99BCACAAAAATKJxyAAASAZDO2lrw
+ 
+  
